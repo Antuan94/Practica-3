@@ -166,3 +166,76 @@ footer { font-size: .9rem; }
 @media (max-width: 1199.98px) {
   .practice-nav { display: none !important; }
 }
+
+/* ==========================================================================
+   ESTILOS ADICIONALES PARA NAVEGACIÓN Y FOOTER SIMPLIFICADOS
+   ========================================================================== */
+
+/* Menú flotante lateral de prácticas */
+.practice-nav-fixed {
+  position: fixed;
+  left: 24px;
+  top: 90px;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.practice-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 36px;
+  width: 130px;
+  background: #1a1a1a;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s;
+}
+
+.practice-btn:hover {
+  transform: translateX(2px);
+  color: #fff;
+}
+
+.practice-btn.active-practice {
+  background: #d62828;
+}
+
+/* Footer simplificado */
+.footer-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px 40px;
+  background: #151218;
+  color: #fff;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-btn-subir {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #d62828;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1.5px solid #fff;
+}
+
+.footer-btn-subir:hover {
+  background: #b51f1f;
+  color: #fff;
+}

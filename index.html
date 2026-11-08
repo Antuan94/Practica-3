@@ -13,7 +13,7 @@
 </head>
 <body class="has-practice-nav">
 
-  <!-- Fila 1: Cabecera con 3 columnas (Menú / Logo / Herramientas) mediante navbar -->
+  <!-- Fila 1: Cabecera -->
   <header class="sticky-top bg-white border-bottom border-4 border-dark">
     <nav class="navbar navbar-expand-lg py-2">
       <div class="container-fluid">
@@ -46,7 +46,7 @@
   </header>
 
   <main id="inicio">
-    <!-- Fila 2: Hero de una columna (carousel / image-overlay style) -->
+    <!-- Fila 2: Hero Carousel -->
     <section class="container-fluid px-0 mb-4 reveal">
       <div id="heroCarousel" class="carousel slide hero-carousel border-bottom border-4 border-dark" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -66,11 +66,11 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/img/colinas-galilea.jpg" class="d-block w-100" alt="Colinas de Galilea en estilo viñeta" loading="lazy">
+            <img src="assets/img/colinas-galilea.jpg" class="d-block w-100" alt="Colinas de Galilea" loading="lazy">
             <div class="carousel-caption">
               <div class="comic-panel d-inline-block bg-white bg-opacity-75 text-dark p-3">
                 <h2 class="section-label h3 mb-1">Caminos y relatos</h2>
-                <p class="mb-0">Diseño responsive: columnas que se adaptan a cada pantalla.</p>
+                <p class="mb-0">Diseño responsive: columnas adaptables.</p>
               </div>
             </div>
           </div>
@@ -79,135 +79,105 @@
             <div class="carousel-caption text-end">
               <div class="comic-panel d-inline-block bg-white bg-opacity-75 text-dark p-3">
                 <h2 class="section-label h3 mb-1">Efecto scroll</h2>
-                <p class="mb-0">Las secciones aparecen suavemente al hacer scroll.</p>
+                <p class="mb-0">Aparición suave al hacer scroll.</p>
               </div>
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
       </div>
     </section>
 
-    <!-- Filas 3-8: Damero (6 filas, 2 columnas) — en móvil 1 columna -->
+    <!-- Damero (6 filas) -->
     <section id="damero" class="container py-2">
       <div class="reveal mb-4">
         <h2 class="section-label display-6">Historias en damero</h2>
-        <p class="text-secondary">Seis filas alternando tarjeta e imagen. En pantallas pequeñas se apilan en una columna.</p>
+        <p class="text-secondary">Seis filas alternando tarjeta e imagen.</p>
       </div>
 
-      <!-- Fila damero 1: card | imagen -->
+      <!-- Fila 1 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
         <div class="col-12 col-md-6">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 1</span>
-              <h3 class="section-label h4 card-title">El encuentro</h3>
-              <p class="card-text">Una escena inicial presentada como panel narrativo. La composición combina texto y fotografía con un marco de cómic para reforzar la lectura visual.</p>
-              <a href="#galeria" class="btn btn-outline-primary btn-sm align-self-start">Ver galería</a>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 1</span>
+            <h3 class="section-label h4 card-title">El encuentro</h3>
+            <p class="card-text">Escena inicial presentada como panel narrativo combinando texto y fotografía.</p>
+            <a href="#galeria" class="btn btn-outline-primary btn-sm align-self-start">Ver galería</a>
+          </div></article>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="damero-img"><img src="assets/img/jesus.jpg" alt="Panel del encuentro" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6"><div class="damero-img"><img src="assets/img/jesus.jpg" alt="Encuentro" loading="lazy"></div></div>
       </div>
 
-      <!-- Fila damero 2: imagen | card -->
+      <!-- Fila 2 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
-        <div class="col-12 col-md-6 order-2 order-md-1">
-          <div class="damero-img"><img src="assets/img/pedro.jpg" alt="Panel de Pedro" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6 order-2 order-md-1"><div class="damero-img"><img src="assets/img/pedro.jpg" alt="Pedro" loading="lazy"></div></div>
         <div class="col-12 col-md-6 order-1 order-md-2">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 2</span>
-              <h3 class="section-label h4 card-title">Vocación y carácter</h3>
-              <p class="card-text">El damero alterna la posición de imagen y contenido para crear ritmo, igual que en una landing corporativa, pero con estética de viñeta.</p>
-              <a href="#contacto" class="btn btn-outline-primary btn-sm align-self-start">Contacto</a>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 2</span>
+            <h3 class="section-label h4 card-title">Vocación y carácter</h3>
+            <p class="card-text">El damero alterna la posición para crear ritmo visual.</p>
+            <a href="#contacto" class="btn btn-outline-primary btn-sm align-self-start">Contacto</a>
+          </div></article>
         </div>
       </div>
 
-      <!-- Fila damero 3: card | imagen -->
+      <!-- Fila 3 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
         <div class="col-12 col-md-6">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 3</span>
-              <h3 class="section-label h4 card-title">Comunidad</h3>
-              <p class="card-text">Las tarjetas usan el grid de Bootstrap (<code>col-12 col-md-6</code>) para pasar de dos columnas a una sola en dispositivos pequeños.</p>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 3</span>
+            <h3 class="section-label h4 card-title">Comunidad</h3>
+            <p class="card-text">Uso del grid de Bootstrap para pasar de dos columnas a una en móviles.</p>
+          </div></article>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="damero-img"><img src="assets/img/hermanos.jpg" alt="Panel de comunidad" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6"><div class="damero-img"><img src="assets/img/hermanos.jpg" alt="Comunidad" loading="lazy"></div></div>
       </div>
 
-      <!-- Fila damero 4: imagen | card -->
+      <!-- Fila 4 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
-        <div class="col-12 col-md-6 order-2 order-md-1">
-          <div class="damero-img"><img src="assets/img/milagro.jpg" alt="Panel del milagro" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6 order-2 order-md-1"><div class="damero-img"><img src="assets/img/milagro.jpg" alt="Milagro" loading="lazy"></div></div>
         <div class="col-12 col-md-6 order-1 order-md-2">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 4</span>
-              <h3 class="section-label h4 card-title">Asombro</h3>
-              <p class="card-text">Cada imagen carga con <code>loading="lazy"</code> para diferir su descarga hasta que se aproxima al viewport.</p>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 4</span>
+            <h3 class="section-label h4 card-title">Asombro</h3>
+            <p class="card-text">Carga optimizada con lazy loading en las imágenes.</p>
+          </div></article>
         </div>
       </div>
 
-      <!-- Fila damero 5: card | imagen -->
+      <!-- Fila 5 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
         <div class="col-12 col-md-6">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 5</span>
-              <h3 class="section-label h4 card-title">Camino</h3>
-              <p class="card-text">La narrativa avanza en bloques alternos: información estructurada a un lado y escena visual al otro, manteniendo jerarquía clara.</p>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-dark mb-2 align-self-start">Capítulo 5</span>
+            <h3 class="section-label h4 card-title">Camino</h3>
+            <p class="card-text">Bloques alternos manteniendo una jerarquía clara.</p>
+          </div></article>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="damero-img"><img src="assets/img/jesus-hacia-jerusalen.jpeg" alt="Panel del camino" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6"><div class="damero-img"><img src="assets/img/jesus-hacia-jerusalen.jpeg" alt="Camino" loading="lazy"></div></div>
       </div>
 
-      <!-- Fila damero 6: imagen | card -->
+      <!-- Fila 6 -->
       <div class="row g-4 align-items-stretch mb-4 reveal">
-        <div class="col-12 col-md-6 order-2 order-md-1">
-          <div class="damero-img"><img src="assets/img/la-ultima-cena.jpeg" alt="Panel de la última cena" loading="lazy"></div>
-        </div>
+        <div class="col-12 col-md-6 order-2 order-md-1"><div class="damero-img"><img src="assets/img/la-ultima-cena.jpeg" alt="Última cena" loading="lazy"></div></div>
         <div class="col-12 col-md-6 order-1 order-md-2">
-          <article class="card damero-card">
-            <div class="card-body">
-              <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 6</span>
-              <h3 class="section-label h4 card-title">Encuentro final</h3>
-              <p class="card-text">Cierre del damero con una escena amplia. El conjunto replica la lógica de secciones corporativas con identidad gráfica propia.</p>
-            </div>
-          </article>
+          <article class="card damero-card"><div class="card-body">
+            <span class="badge text-bg-primary mb-2 align-self-start">Capítulo 6</span>
+            <h3 class="section-label h4 card-title">Encuentro final</h3>
+            <p class="card-text">Cierre del damero con una escena amplia.</p>
+          </div></article>
         </div>
       </div>
     </section>
 
-    <!-- Filas 9-10 resumidas: banda de ancho completo -->
+    <!-- Banda de ancho completo -->
     <section class="band py-5 reveal">
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-12 col-lg-8">
             <h2 class="section-label display-6 mb-2">Fila de ancho completo</h2>
-            <p class="lead mb-0">Esta sección resume las dos filas completas de la guía: ocupa todo el ancho en cualquier resolución y funciona como bloque de llamada a la acción o mensaje institucional.</p>
+            <p class="lead mb-0">Bloque institucional de llamada a la acción.</p>
           </div>
           <div class="col-12 col-lg-4 text-lg-end">
             <a class="btn btn-light btn-lg fw-semibold" href="#galeria"><i class="bi bi-images me-2"></i>Abrir galería</a>
@@ -216,96 +186,65 @@
       </div>
     </section>
 
-    <!-- Penúltima fila: 4 columnas de imágenes, 1 en móvil, collapse al hacer clic -->
+    <!-- Galería con collapse -->
     <section id="galeria" class="container py-5">
       <div class="reveal mb-4">
         <h2 class="section-label display-6">Galería con collapse</h2>
-        <p class="text-secondary">Cuatro columnas en escritorio; una columna en pantallas pequeñas. Haz clic en cada imagen para desplegar su información.</p>
+        <p class="text-secondary">Haz clic en cada imagen para desplegar su información.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-12 col-sm-6 col-lg-3 reveal">
-          <div class="gallery-tile" data-bs-toggle="collapse" data-bs-target="#gal1" aria-expanded="false" aria-controls="gal1" role="button">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-sm-6 col-lg-3 reveal d-flex flex-column">
+          <div class="gallery-tile mb-2" data-bs-toggle="collapse" data-bs-target="#gal1" role="button">
             <img src="assets/img/bautismo.jpeg" alt="Bautismo" loading="lazy">
             <p class="tile-title">Bautismo <i class="bi bi-chevron-down float-end"></i></p>
           </div>
-          <div class="collapse" id="gal1">
-            <div class="comic-panel p-3 border-top-0">Panel desplegable con detalle de la escena. El componente <code>collapse</code> de Bootstrap muestra u oculta contenido al pulsar.</div>
-          </div>
+          <div class="collapse" id="gal1"><div class="comic-panel p-3">Detalle de la escena de bautismo.</div></div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 reveal">
-          <div class="gallery-tile" data-bs-toggle="collapse" data-bs-target="#gal2" aria-expanded="false" aria-controls="gal2" role="button">
+        <div class="col-12 col-sm-6 col-lg-3 reveal d-flex flex-column">
+          <div class="gallery-tile mb-2" data-bs-toggle="collapse" data-bs-target="#gal2" role="button">
             <img src="assets/img/abrazo.jpg" alt="Abrazo" loading="lazy">
             <p class="tile-title">Abrazo <i class="bi bi-chevron-down float-end"></i></p>
           </div>
-          <div class="collapse" id="gal2">
-            <div class="comic-panel p-3 border-top-0">Encuentro y fraternidad. En móvil estas cuatro columnas se convierten en una única columna apilada.</div>
-          </div>
+          <div class="collapse" id="gal2"><div class="comic-panel p-3">Encuentro y fraternidad comunitaria.</div></div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 reveal">
-          <div class="gallery-tile" data-bs-toggle="collapse" data-bs-target="#gal3" aria-expanded="false" aria-controls="gal3" role="button">
-            <img src="assets/img/recaudador.jpeg" alt="El recaudador" loading="lazy">
+        <div class="col-12 col-sm-6 col-lg-3 reveal d-flex flex-column">
+          <div class="gallery-tile mb-2" data-bs-toggle="collapse" data-bs-target="#gal3" role="button">
+            <img src="assets/img/recaudador.jpeg" alt="Recaudador" loading="lazy">
             <p class="tile-title">Recaudador <i class="bi bi-chevron-down float-end"></i></p>
           </div>
-          <div class="collapse" id="gal3">
-            <div class="comic-panel p-3 border-top-0">Una mirada que transforma. El grid usa <code>col-12 col-sm-6 col-lg-3</code> para el cambio progresivo.</div>
-          </div>
+          <div class="collapse" id="gal3"><div class="comic-panel p-3">Una mirada que transforma la historia.</div></div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3 reveal">
-          <div class="gallery-tile" data-bs-toggle="collapse" data-bs-target="#gal4" aria-expanded="false" aria-controls="gal4" role="button">
-            <img src="assets/img/todos.jpg" alt="Todos juntos" loading="lazy">
+        <div class="col-12 col-sm-6 col-lg-3 reveal d-flex flex-column">
+          <div class="gallery-tile mb-2" data-bs-toggle="collapse" data-bs-target="#gal4" role="button">
+            <img src="assets/img/todos.jpg" alt="Comunidad" loading="lazy">
             <p class="tile-title">Comunidad <i class="bi bi-chevron-down float-end"></i></p>
           </div>
-          <div class="collapse" id="gal4">
-            <div class="comic-panel p-3 border-top-0">La comunidad reunida. Todas las imágenes incluyen el atributo <code>loading="lazy"</code>.</div>
-          </div>
+          <div class="collapse" id="gal4"><div class="comic-panel p-3">La comunidad reunida al completo.</div></div>
         </div>
       </div>
     </section>
 
-    <!-- Última fila: iconos sociales; en móvil se comporta como accordion -->
+    <!-- Redes sociales -->
     <section id="contacto" class="container pb-5">
       <div class="reveal mb-3">
         <h2 class="section-label display-6">Redes sociales</h2>
-        <p class="text-secondary">En escritorio se muestran como fila de iconos; en pantallas pequeñas se presentan como acordeón.</p>
       </div>
-
-      <!-- Vista escritorio/tablet: iconos en fila -->
-      <div class="d-none d-md-flex social-row flex-wrap gap-3 justify-content-center reveal" aria-label="Redes sociales">
-        <a href="#" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <div class="d-none d-md-flex social-row flex-wrap gap-3 justify-content-center reveal">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-youtube"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-github"></i></a>
       </div>
-
-      <!-- Vista móvil: accordion -->
       <div class="accordion d-md-none reveal" id="socialAccordion">
         <div class="accordion-item comic-panel mb-2">
-          <h3 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#soc1" aria-expanded="true" aria-controls="soc1">
-              <i class="bi bi-share-fill me-2"></i> Redes principales
-            </button>
-          </h3>
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#soc1"><i class="bi bi-share-fill me-2"></i> Redes principales</button></h3>
           <div id="soc1" class="accordion-collapse collapse show" data-bs-parent="#socialAccordion">
             <div class="accordion-body d-flex gap-3 flex-wrap">
-              <a class="btn btn-outline-dark" href="#" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
-              <a class="btn btn-outline-dark" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a class="btn btn-outline-dark" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item comic-panel mb-2">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#soc2" aria-expanded="false" aria-controls="soc2">
-              <i class="bi bi-camera-video-fill me-2"></i> Vídeo y comunidad
-            </button>
-          </h3>
-          <div id="soc2" class="accordion-collapse collapse" data-bs-parent="#socialAccordion">
-            <div class="accordion-body d-flex gap-3 flex-wrap">
-              <a class="btn btn-outline-dark" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-              <a class="btn btn-outline-dark" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a class="btn btn-outline-dark" href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a class="btn btn-outline-dark" href="#"><i class="bi bi-twitter-x"></i></a>
+              <a class="btn btn-outline-dark" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="btn btn-outline-dark" href="#"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -313,76 +252,33 @@
     </section>
   </main>
 
-  <footer style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 20px 40px; background: #151218; color: #fff; border-top: 2px solid rgba(255, 255, 255, 0.1);">
-      <p style="margin: 0; font-size: 0.9rem; max-width: 800px;">
-        Práctica 3
-      </p>
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <p class="m-0" style="font-size: 0.9rem; max-width: 800px;">Práctica 3</p>
+    <a href="#" class="footer-btn-subir"><span>Subir</span> <span>↑</span></a>
+  </footer>
 
-      <!-- Botón de Subir / Volver arriba -->
-      <a href="#" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: #d62828; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px; border: 1.5px solid #fff; transition: background 0.2s;">
-        <span>Subir</span> <span>↑</span>
-      </a>
-    </footer>
-
-
-
-  <!-- Menú flotante de prácticas -->
-  <div class="practice-nav" style="position: fixed; left: 24px; top: 90px; z-index: 300; display: flex; flex-direction: column; gap: 6px;">
-    <a href="https://antuan94.github.io/Practica-1/" target="_blank" aria-label="Ir a Práctica 1" style="display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:36px;width:130px;background:#1a1a1a;border:2px solid #fff;color:#fff;font-size:.8rem;font-weight:bold;text-decoration:none;box-shadow:3px 3px 0 rgba(0,0,0,.4);"><span>Práctica 1</span><span>→</span></a>
-    <a href="https://antuan94.github.io/Practica-2/" target="_blank" aria-label="Ir a Práctica 3" style="display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:36px;width:130px;background:#1a1a1a;border:2px solid #fff;color:#fff;font-size:.8rem;font-weight:bold;text-decoration:none;box-shadow:3px 3px 0 rgba(0,0,0,.4);"><span>Práctica 2</span><span>→</span></a>
-    <a href="https://antuan94.github.io/Practica-4/" target="_blank" aria-label="Ir a Práctica 4" style="display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:36px;width:130px;background:#1a1a1a;border:2px solid #fff;color:#fff;font-size:.8rem;font-weight:bold;text-decoration:none;box-shadow:3px 3px 0 rgba(0,0,0,.4);"><span>Práctica 4</span><span>→</span></a>
-    <a href="https://antuan94.github.io/Practica-5/" target="_blank" aria-label="Ir a Práctica 5" style="display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:36px;width:130px;background:#1a1a1a;border:2px solid #fff;color:#fff;font-size:.8rem;font-weight:bold;text-decoration:none;box-shadow:3px 3px 0 rgba(0,0,0,.4);"><span>Práctica 5</span><span>→</span></a>
-    <a href="https://antuan94.github.io/Practica-6/" target="_blank" aria-label="Ir a Práctica 6" style="display:flex;align-items:center;justify-content:space-between;padding:0 12px;height:36px;width:130px;background:#1a1a1a;border:2px solid #fff;color:#fff;font-size:.8rem;font-weight:bold;text-decoration:none;box-shadow:3px 3px 0 rgba(0,0,0,.4);"><span>Práctica 6</span><span>→</span></a>
+  <!-- Menú lateral flotante -->
+  <div class="practice-nav-fixed">
+    <a href="https://antuan94.github.io/Practica-1/" target="_blank" class="practice-btn"><span>Práctica 1</span><span>→</span></a>
+    <a href="https://antuan94.github.io/Practica-2/" target="_blank" class="practice-btn"><span>Práctica 2</span><span>→</span></a>
+    <a href="https://antuan94.github.io/Practica-4/" target="_blank" class="practice-btn"><span>Práctica 4</span><span>→</span></a>
+    <a href="https://antuan94.github.io/Practica-5/" target="_blank" class="practice-btn"><span>Práctica 5</span><span>→</span></a>
+    <a href="https://antuan94.github.io/Practica-6/" target="_blank" class="practice-btn"><span>Práctica 6</span><span>→</span></a>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Extra: aparición suave al hacer scroll (IntersectionObserver)
     (function () {
       var items = document.querySelectorAll('.reveal');
-      if (!('IntersectionObserver' in window)) {
-        items.forEach(function (el) { el.classList.add('is-visible'); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
+      if (!('IntersectionObserver' in window)) { items.forEach(el => el.classList.add('is-visible')); return; }
+      var io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
         });
       }, { threshold: 0.12 });
-      items.forEach(function (el) { io.observe(el); });
+      items.forEach(el => io.observe(el));
     })();
   </script>
-  <!-- Menú flotante horizontal de prácticas (más centrado a la derecha) -->
-  <div style="position: fixed; left: 420px; top: 12px; z-index: 300; display: flex; flex-direction: row; gap: 8px; background: rgba(21, 18, 24, 0.95); padding: 8px 12px; border-radius: 6px; border: 2px solid rgba(255, 255, 255, 0.3); box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);">
-    
-    <!-- Botón Práctica 1 -->
-    <a href="https://antuan94.github.io/Practica-1/" target="_blank" aria-label="Ir a Práctica 2" style="display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 38px; background: #d62828; border: 2px solid #fff; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px;">
-      <span>Práctica 1</span> <span>→</span>
-    </a>
-
-    <!-- Botón Práctica 2 -->
-    <a href="https://antuan94.github.io/Practica-2/" target="_blank" aria-label="Ir a Práctica 3" style="display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 38px; background: #1a1a1a; border: 2px solid #fff; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px;">
-      <span>Práctica 2</span> <span>→</span>
-    </a>
-
-    <!-- Botón Práctica 4 -->
-    <a href="https://antuan94.github.io/Practica-4/" target="_blank" aria-label="Ir a Práctica 4" style="display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 38px; background: #1a1a1a; border: 2px solid #fff; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px;">
-      <span>Práctica 4</span> <span>→</span>
-    </a>
-
-    <!-- Botón Práctica 5 -->
-    <a href="https://antuan94.github.io/Practica-5/" target="_blank" aria-label="Ir a Práctica 5" style="display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 38px; background: #1a1a1a; border: 2px solid #fff; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px;">
-      <span>Práctica 5</span> <span>→</span>
-    </a>
-
-    <!-- Botón Práctica 6 -->
-    <a href="https://antuan94.github.io/Practica-6/" target="_blank" aria-label="Ir a Práctica 6" style="display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 38px; background: #1a1a1a; border: 2px solid #fff; color: #fff; font-size: 0.85rem; font-weight: bold; text-decoration: none; border-radius: 4px;">
-      <span>Práctica 6</span> <span>→</span>
-    </a>
-
-  </div>
 </body>
 </html>
