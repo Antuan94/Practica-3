@@ -1,0 +1,38 @@
+/* ==========================================================================
+   VARIABLES GLOBALES — Tokens de diseño y Modo Claro/Oscuro
+   ========================================================================== */
+
+:root {
+  /* Tipografías */
+  --fuente-titulo: "Bangers", "Impact", sans-serif;
+  --fuente-cuerpo: "Nunito", system-ui, sans-serif;
+
+  /* Espaciamiento y Bordes */
+  --espacio-gap: 12px;
+  --borde-grosor: 4px;
+  --radio-panel: 4px;
+
+  /* Colores Modo Claro (por defecto) */
+  --color-fondo-pag: #f6f1e7;
+  --color-fondo-panel: #fffdf8;
+  --color-cartela: #fff4a3;
+  --color-texto: #1a1a1a;
+  --color-borde: #1a1a1a;
+  --color-acento: #d62828;
+  --sombra-panel: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  --sombra-hover: 8px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Modo Oscuro automático (si el sistema del usuario lo requiere) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo-pag: #121317;
+    --color-fondo-panel: #1d1f26;
+    --color-cartela: #3a3200;
+    --color-texto: #f4f1ea;
+    --color-borde: #f4f1ea;
+    --color-acento: #ff5a5f;
+    --sombra-panel: 5px 5px 0 rgba(0, 0, 0, 0.5);
+    --sombra-hover: 8px 8px 0 rgba(0, 0, 0, 0.7);
+  }
+}

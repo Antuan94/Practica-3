@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viñetas del Evangelio — Bento Grid</title>
+  
+  <!-- Fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos (apunta a css/styles.css o a styles_2.css según cómo lo llames) -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header class="page-header">
+    <h1>Viñetas del Evangelio</h1>
+    <p class="subtitle">Maquetación tipo Bento con CSS Grid anidado y Responsive</p>
+  </header>
+
+  <!-- CONTENEDOR BENTO (GRID NIVEL 1: 3 Columnas) -->
+  <main class="bento">
+
+    <!-- ÁREA 1: EL LLAMADO -->
+    <section class="area">
+      <h2 class="area-title">El Llamado</h2>
+      
+      <!-- SUB-GRID (GRID NIVEL 2: 2 Sub-columnas) -->
+      <div class="area-grid">
+        <article class="panel span-feature">
+          <img src="assets/img/portada.jpg" alt="Portada">
+          <div class="caption"><strong>Portada</strong>Una historia en viñetas.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/jesus.jpg" alt="Jesús">
+          <div class="caption"><strong>El Maestro</strong>Presencia serena.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/pedro.jpg" alt="Pedro">
+          <div class="caption"><strong>Pedro</strong>Firme y decidido.</div>
+        </article>
+
+        <article class="panel span-row">
+          <img src="assets/img/andres.jpg" alt="Andrés">
+          <div class="caption"><strong>Andrés</strong>El primero en seguir la llamada.</div>
+        </article>
+
+        <article class="panel span-tall">
+          <img src="assets/img/milagro.jpg" alt="Milagro">
+          <div class="caption"><strong>Milagro</strong>Asombro en la multitud.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/bautismo.jpeg" alt="Bautismo">
+          <div class="caption"><strong>Bautismo</strong>Un nuevo comienzo.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ÁREA 2: LOS DISCÍPULOS -->
+    <section class="area">
+      <h2 class="area-title">Los Discípulos</h2>
+      
+      <!-- SUB-GRID (GRID NIVEL 2) -->
+      <div class="area-grid">
+        <article class="panel span-tall">
+          <img src="assets/img/hermanos.jpg" alt="Hermanos">
+          <div class="caption"><strong>Hermanos</strong>Unidos por la fe.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/primos.jpg" alt="Primos">
+          <div class="caption"><strong>Primos</strong>Lazos cercanos.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/hijos-del-trueno.jpg" alt="Hijos del Trueno">
+          <div class="caption"><strong>Hijos del trueno</strong>Carácter ardiente.</div>
+        </article>
+
+        <article class="panel span-row">
+          <img src="assets/img/abrazo.jpg" alt="Abrazo">
+          <div class="caption"><strong>Abrazo</strong>Fraternidad y encuentro.</div>
+        </article>
+
+        <article class="panel span-feature">
+          <img src="assets/img/todos.jpg" alt="Todos juntos">
+          <div class="caption"><strong>Todos juntos</strong>La comunidad se reúne.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ÁREA 3: MILAGROS Y CAMINO -->
+    <section class="area">
+      <h2 class="area-title">Milagros y Camino</h2>
+      
+      <!-- SUB-GRID (GRID NIVEL 2) -->
+      <div class="area-grid">
+        <article class="panel">
+          <img src="assets/img/recaudador.jpeg" alt="El recaudador">
+          <div class="caption"><strong>El recaudador</strong>Una mirada que transforma.</div>
+        </article>
+
+        <article class="panel span-tall">
+          <img src="assets/img/luz-de-dios.jpeg" alt="Luz de Dios">
+          <div class="caption"><strong>Luz de Dios</strong>Claridad en el horizonte.</div>
+        </article>
+
+        <article class="panel">
+          <img src="assets/img/colinas-galilea.jpg" alt="Galilea">
+          <div class="caption"><strong>Galilea</strong>Colinas y caminos.</div>
+        </article>
+
+        <article class="panel span-row">
+          <img src="assets/img/jesus-hacia-jerusalen.jpeg" alt="Hacia Jerusalén">
+          <div class="caption"><strong>Hacia Jerusalén</strong>El viaje continúa.</div>
+        </article>
+
+        <article class="panel span-feature">
+          <img src="assets/img/la-ultima-cena.jpeg" alt="La Última Cena">
+          <div class="caption"><strong>La Última Cena</strong>Un momento inolvidable.</div>
+        </article>
+
+        <article class="panel span-row">
+          <img src="assets/img/portada-2.jpg" alt="Epílogo">
+          <div class="caption"><strong>Epílogo</strong>Continuará…</div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Práctica CSS Bento — Diseño Grid Anidado y Responsive</p>
+  </footer>
+
+</body>
+</html>
