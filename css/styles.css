@@ -1,167 +1,168 @@
-/* ==========================================================================
-   HOJA DE ESTILOS PRINCIPAL — Bento Grid de Viñetas
-   ========================================================================== */
-
-/* 1. IMPORTACIÓN OBLIGATORIA DE VARIABLES */
+/* Cisco-style Bootstrap mockup — comic panel aesthetic (Práctica 2) */
 @import url("variables.css");
 
-/* Reset básico del modelo de caja y márgenes */
-*, *::before, *::after {
-  box-sizing: border-box;
+:root {
+  --comic-border: 4px solid #1a1a1a;
+  --comic-shadow: 6px 6px 0 rgba(0, 0, 0, 0.18);
+  --brand: #0d6efd;
+  --brand-dark: #0a58ca;
 }
 
 body {
-  margin: 0;
-  font-family: var(--fuente-cuerpo);
-  background-color: var(--color-fondo-pag);
-  color: var(--color-texto);
-  line-height: 1.4;
+  font-family: var(--fuente-cuerpo, "Nunito", system-ui, sans-serif);
+  background: var(--color-fondo-pag, #f6f1e7);
+  color: var(--color-texto, #1a1a1a);
 }
 
-/* Imágenes responsivas que cubren su caja */
-img {
-  display: block;
+/* Comic framing */
+.comic-panel {
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 2px;
+  background: var(--color-fondo-panel, #fffdf8);
+  overflow: hidden;
+}
+.comic-panel img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+.comic-caption {
+  background: var(--color-cartela, #fff4a3);
+  border-top: 3px solid #1a1a1a;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+}
+.comic-caption strong {
+  display: block;
+  font-family: var(--fuente-titulo, "Bangers", sans-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.section-label {
+  font-family: var(--fuente-titulo, "Bangers", sans-serif);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* 2. CABECERA */
-.page-header {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem 0;
-
-  & h1 {
-    margin: 0;
-    font-family: var(--fuente-titulo);
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--color-texto);
-  }
-
-  & .subtitle {
-    margin-top: 0.25rem;
-    color: var(--color-acento);
-    font-weight: bold;
-  }
+/* Hero / carousel */
+.hero-carousel .carousel-item {
+  height: clamp(260px, 45vw, 520px);
 }
-
-/* ==========================================================================
-   3. GRID NIVEL 1: BENTO PRINCIPAL (3 Columnas > 700px)
-   ========================================================================== */
-.bento {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas principales */
-  gap: var(--espacio-gap);
+.hero-carousel .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
 }
-
-/* RESPONSIVE: Apilamiento a 1 columna en pantallas <= 700px */
-@media (max-width: 700px) {
-  .bento {
-    grid-template-columns: 1fr; /* Pasa de 3 columnas a 1 sola */
-  }
-}
-
-/* Las 3 Áreas Contenedoras */
-.area {
-  background: var(--color-fondo-panel);
-  border: var(--borde-grosor) solid var(--color-borde); /* Borde externo */
-  box-shadow: var(--sombra-panel);
-  padding: var(--espacio-gap);
-
-  & .area-title {
-    margin: 0 0 1rem 0;
-    font-family: var(--fuente-titulo);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-  }
-}
-
-/* ==========================================================================
-   4. GRID NIVEL 2: SUB-GRID ANIDADO (Celdas de varios tamaños)
-   ========================================================================== */
-.area-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 sub-columnas por área */
-  grid-auto-rows: 120px; /* Altura base de cada celda */
-  gap: var(--espacio-gap);
-}
-
-/* TIPOS DE CELDAS (SPANS DEL NIVEL 2) */
-
-/* Ocupa toda la fila horizontal (las 2 sub-columnas) */
-.span-row {
-  grid-column: 1 / -1;
-}
-
-/* Ocupa 2 filas de alto verticalmente */
-.span-tall {
-  grid-row: span 2;
-}
-
-/* Ocupa toda la fila + 2 filas de alto (celda gigante) */
-.span-feature {
-  grid-column: 1 / -1;
-  grid-row: span 2;
-}
-
-/* ==========================================================================
-   5. TARJETAS / VIÑETAS DE CÓMIC Y TRANSICIÓN HOVER
-   ========================================================================== */
-.panel {
-  position: relative;
+.hero-overlay-card {
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
   overflow: hidden;
-  background: var(--color-fondo-panel);
-  border: 3px solid var(--color-borde);
-  border-radius: var(--radio-panel);
-  /* Transición fluida para el efecto sutil al pasar el ratón */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-  /* Cartela/Bocadillo de texto amarillo inferior */
-  & .caption {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 0.5rem;
-    right: 0.5rem;
-    padding: 0.3rem 0.5rem;
-    background: var(--color-cartela);
-    color: #1a1a1a;
-    border: 2px solid var(--color-borde);
-    font-size: 0.85rem;
-    line-height: 1.1;
-
-    & strong {
-      display: block;
-      font-family: var(--fuente-titulo);
-      font-size: 0.95rem;
-      text-transform: uppercase;
-    }
-  }
-
-  /* TRANSICIÓN SUTIL EN HOVER (Requisito) */
-  &:hover {
-    transform: translateY(-4px); /* Eleva la viñeta 4 píxeles */
-    box-shadow: var(--sombra-hover); /* Aumenta la sombra */
-
-    & img {
-      transform: scale(1.05); /* Efecto zoom ligero en la foto */
-    }
-  }
-
-  & img {
-    transition: transform 0.2s ease;
-  }
+}
+.hero-overlay-card .card-img-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.15) 55%, rgba(0,0,0,0));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-/* 6. PIE DE PÁGINA */
-footer {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 1rem;
-  font-size: 0.85rem;
-  text-align: center;
+/* Damero rows */
+.damero-card {
+  height: 100%;
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 2px;
+}
+.damero-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.damero-img {
+  height: 100%;
+  min-height: 260px;
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.damero-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+/* Full-width band */
+.band {
+  background: #111827;
+  color: #f9fafb;
+  border-top: var(--comic-border);
+  border-bottom: var(--comic-border);
+}
+.band .lead { color: #d1d5db; }
+
+/* Gallery + collapse */
+.gallery-tile {
+  cursor: pointer;
+  border: var(--comic-border);
+  box-shadow: var(--comic-shadow);
+  border-radius: 2px;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+}
+.gallery-tile img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.gallery-tile .tile-title {
+  font-family: var(--fuente-titulo, "Bangers", sans-serif);
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+  padding: .55rem .75rem;
+  background: var(--color-cartela, #fff4a3);
+  border-top: 3px solid #1a1a1a;
+  margin: 0;
+}
+
+/* Social */
+.social-row a {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1a1a1a;
+  background: #fff;
+  color: #111;
+  font-size: 1.35rem;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.15);
+  text-decoration: none;
+}
+.social-row a:hover { transform: translateY(-2px); color: var(--brand); }
+
+/* Scroll reveal (extra) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+footer { font-size: .9rem; }
+
+/* Keep space for fixed practice nav on wide screens */
+@media (min-width: 1200px) {
+  .has-practice-nav { padding-left: 170px; }
+}
+@media (max-width: 1199.98px) {
+  .practice-nav { display: none !important; }
 }
