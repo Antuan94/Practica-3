@@ -69,7 +69,7 @@ img {
 /* Las 3 Áreas Contenedoras */
 .area {
   background: var(--color-fondo-panel);
-  border: var(--borde-grosor) solid var(--color-borde);
+  border: var(--borde-grosor) solid var(--color-borde); /* Borde externo */
   box-shadow: var(--sombra-panel);
   padding: var(--espacio-gap);
 
